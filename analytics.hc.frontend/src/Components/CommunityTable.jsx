@@ -8,18 +8,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from "./Title"
 
-// Generate Community Data
-function createData(id, dateCreated, name, shipTo, paymentMethod, amount) {
-  return { id, dateCreated, name, shipTo, paymentMethod, amount };
-}
-
-const rows = [
-  createData(0, '16 Mar, 2019', 'Elvis Presley', 'Tupelo, MS', 'VISA ⠀•••• 3719', 312.44),
-  createData(1, '16 Mar, 2019', 'Paul McCartney', 'London, UK', 'VISA ⠀•••• 2574', 866.99),
-  createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
-  createData(3, '16 Mar, 2019', 'Michael Jackson', 'Gary, IN', 'AMEX ⠀•••• 2000', 654.39),
-  createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'Long Branch, NJ', 'VISA ⠀•••• 5919', 212.79),
-];
 
 function preventDefault(event) {
   event.preventDefault();
@@ -30,10 +18,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
 }));
-
-export default function CommunityTable() {
+const CommunityTable = ({communities}) => {
   const classes = useStyles();
-
+  console.log(communities)
   return (
     <React.Fragment>
       <Title>Communities Descriptive Analytics</Title>
@@ -49,14 +36,14 @@ export default function CommunityTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.dateCreated}</TableCell>
-              <TableCell align="right">{row.averageRent}</TableCell>
-              <TableCell align="right">{row.lowestRent}</TableCell>
-              <TableCell align="right">{row.lowestRent}</TableCell>
-              <TableCell align="right">{row.amount}</TableCell>
+          {communities.map((community) => (
+            <TableRow key={community.id}>
+              <TableCell>{community.name}</TableCell>
+              <TableCell>{community.dateCreated}</TableCell>
+              <TableCell >{community.numberOfListings}</TableCell>
+              <TableCell >{community.averageRent}</TableCell>
+              <TableCell >{community.lowRent}</TableCell>
+              <TableCell >{community.highRent}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -69,3 +56,4 @@ export default function CommunityTable() {
     </React.Fragment>
   );
 }
+export default CommunityTable

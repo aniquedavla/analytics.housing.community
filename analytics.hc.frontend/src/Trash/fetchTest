@@ -1,0 +1,42 @@
+// const communities = this.getCommunitiesData()
+    //  console.log(communities)
+    // const getCommunities = await fetch("http://my-json-server.typicode.com/aniquedavla/demo/communities")
+    // const communitiesJson = await getCommunities.json  
+    // const getHighLevelData = await fetch("http://my-json-server.typicode.com/aniquedavla/demo/highLevelData")
+    // const highLevelDataJson = await getHighLevelData.json
+    //     console.log(communitiesJson, highLevelDataJson)
+    //     this.setState({
+    //       communities: communitiesJson,
+    //       highLevelData: highLevelDataJson,
+    //       isLoaded: true
+    //     });
+    // }
+    // Promise.all([
+    //   fetch("http://my-json-server.typicode.com/aniquedavla/demo/communities"),
+    //   fetch("http://my-json-server.typicode.com/aniquedavla/demo/highLevelData"),
+    // ]).then(([communities, highLevelData]) => {
+    //     console.log(communities, highLevelData)
+    //     this.setState({
+    //       communities: communities.json,
+    //       highLevelData: highLevelData.json,
+    //       isLoaded: true
+    //     });
+    // })
+  
+      // fetch('http://my-json-server.typicode.com/aniquedavla/demo/communities')
+      //     .then(response => response.json())
+      //     .then(json => this.setState({
+      //         communities: json,
+      //         isLoaded: true
+      //     }));
+      // fetch('http://my-json-server.typicode.com/aniquedavla/demo/highLevelData')
+      // .then(response => response.json())
+      // .then(highLevelJson => this.setState({
+      //     highLevelData: highLevelJson,
+      //     isLoaded: true
+      // }));
+
+      getCommunitiesData = ()=> {
+  //   return fetch('http://my-json-server.typicode.com/aniquedavla/demo/communities')
+  //         .then(response => response.json())
+  // } 

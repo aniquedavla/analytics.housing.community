@@ -26,7 +26,7 @@ class CommunityData extends Component{
                     <h2>Community Data</h2>
                     <ul>
                         {communities.map(aCommunity =>(
-                            <p key={aCommunity.id}>{aCommunity.title}</p> 
+                            <p key={aCommunity.id}>{aCommunity.name}</p> 
                         ))
                         }
                     </ul>

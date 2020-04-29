@@ -14,40 +14,43 @@ class App extends Component {
         super(props)
         this.state = {
             communities:[],
+            highLevelData:{},
             isLoaded:false
         }
   }
 
   componentDidMount(){
-      fetch('http://my-json-server.typicode.com/aniquedavla/demo/communities')
+    fetch('http://my-json-server.typicode.com/aniquedavla/demo/communities')
           .then(response => response.json())
           .then(json => this.setState({
               communities: json,
               isLoaded: true
-          }))
+          }));
   }
   render(){
-    let {isLoaded, communities} = this.state 
+    let {isLoaded, communities, highLevelData} = this.state
+    console.log(this.state);
     if(isLoaded){
       return (
         <div className="App">
           <BrowserRouter>
             <Switch>
               <Route path="/" component={WorkingTest} exact />
-              <Route path="/dashboard" component={Dashboard} exact />
-            </Switch>
+              <Route path="/dashboard" component={()=><Dashboard communities={communities}></Dashboard>} exact />
+            </Switch> 
           </BrowserRouter>
         </div>
       );
     } else {
       return (
         <div className="App">
-          <BrowserRouter>
+        <div>Loading community data...</div>
+          {/* <BrowserRouter>
             <Switch>
               <Route path="/" component={WorkingTest} exact />
               <Route path="/dashboard" component={Dashboard} exact />
             </Switch>
-          </BrowserRouter>
+          </BrowserRouter> */}
         </div>
       );
     }

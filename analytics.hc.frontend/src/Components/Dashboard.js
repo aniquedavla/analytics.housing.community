@@ -6,7 +6,7 @@ import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
+import {List, ListItem, ListItemText} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -18,12 +18,14 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import Title from "./Title"
 // import { mainListItems, secondaryListItems } from './listItems';
 // import Chart from './Chart';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 
 import CommunityTable from './CommunityTable'
+import HighLevelList from './HighLevelList';
 
 const drawerWidth = 240;
 
@@ -91,7 +93,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard() {
+ const Dashboard = ({communities, highLevelData}) => {
+  console.log(communities)
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -100,7 +103,7 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const fixedHeightPaper = clsx(classes.paper, 2*classes.fixedHeight);
   
   return (
     <div className={classes.root}>
@@ -116,16 +119,15 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={2}>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={4}>
+            <Grid item xs={12} md={5} lg={5}>
               <Paper className={fixedHeightPaper}>
-                {/* <Deposits /> */}
+                <HighLevelList highLevelData={highLevelData}></HighLevelList>
               </Paper>
             </Grid>
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <CommunityTable></CommunityTable>
+                <CommunityTable communities={communities}></CommunityTable>
               </Paper>
             </Grid>
           </Grid>
@@ -134,3 +136,4 @@ export default function Dashboard() {
     </div>
   );
 }
+export default Dashboard
