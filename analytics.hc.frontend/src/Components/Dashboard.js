@@ -19,6 +19,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Title from "./Title"
+import UsersChart from "./UsersChart"
 // import { mainListItems, secondaryListItems } from './listItems';
 // import Chart from './Chart';
 // import Deposits from './Deposits';
@@ -122,6 +123,11 @@ const useStyles = makeStyles((theme) => ({
             <Grid item xs={12} md={5} lg={5}>
               <Paper className={fixedHeightPaper}>
                 <HighLevelList></HighLevelList>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6} lg={7}>
+              <Paper className={fixedHeightPaper}>
+                <UsersChart></UsersChart>
               </Paper>
             </Grid>
             <Grid item xs={12}>

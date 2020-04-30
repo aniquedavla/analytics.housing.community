@@ -14,7 +14,6 @@ class App extends Component {
         super(props)
         this.state = {
             communities:[],
-            highLevelData:{},
             isLoaded:false
         }
   }
@@ -28,7 +27,7 @@ class App extends Component {
           }));
   }
   render(){
-    let {isLoaded, communities, highLevelData} = this.state
+    let {isLoaded, communities} = this.state
     console.log(this.state);
     if(isLoaded){
       return (
