@@ -83,13 +83,13 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 280,
   },
 }));
 
@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, 2*classes.fixedHeight);
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   
   return (
     <div className={classes.root}>
@@ -121,10 +121,9 @@ const useStyles = makeStyles((theme) => ({
           <Grid container spacing={2}>
             <Grid item xs={12} md={5} lg={5}>
               <Paper className={fixedHeightPaper}>
-                <HighLevelList highLevelData={highLevelData}></HighLevelList>
+                <HighLevelList></HighLevelList>
               </Paper>
             </Grid>
-            {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
                 <CommunityTable communities={communities}></CommunityTable>

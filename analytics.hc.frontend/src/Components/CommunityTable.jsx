@@ -48,11 +48,11 @@ const CommunityTable = ({communities}) => {
           ))}
         </TableBody>
       </Table>
-      <div className={classes.seeMore}>
+      {/* <div className={classes.seeMore}>
         <Link color="primary" href="#" onClick={preventDefault}>
           See more communities
         </Link>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 }
