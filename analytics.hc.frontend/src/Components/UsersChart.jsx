@@ -12,12 +12,13 @@ class UsersChart extends React.Component {
     }
   }
   componentDidMount(){
-    fetch('http://my-json-server.typicode.com/aniquedavla/demo/newUsersByMonth')
+    const usersUrl = "http://localhost:8080/numOfUsers";
+    fetch(usersUrl)
           .then(response => response.json())
           .then(json => this.setState({
               newUsersByMonth: json,
               isLoaded: true
-          }));
+    }));
   }
   render(){
     console.log(this.state.newUsersByMonth);

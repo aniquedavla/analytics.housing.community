@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('http://my-json-server.typicode.com/aniquedavla/demo/communities')
+    fetch('http://localhost:8080/communities')
           .then(response => response.json())
           .then(json => this.setState({
               communities: json,
@@ -34,8 +34,7 @@ class App extends Component {
         <div className="App">
           <BrowserRouter>
             <Switch>
-              <Route path="/" component={WorkingTest} exact />
-              <Route path="/dashboard" component={()=><Dashboard communities={communities}></Dashboard>} exact />
+              <Route path="/" component={()=><Dashboard communities={communities}></Dashboard>} exact />
             </Switch> 
           </BrowserRouter>
         </div>
