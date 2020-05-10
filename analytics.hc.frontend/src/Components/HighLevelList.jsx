@@ -11,7 +11,7 @@ class HighLevelList extends React.Component{
         }
     }
     componentDidMount(){
-        fetch('http://localhost:8080/highLevelData')
+        fetch('http://34.70.95.142:8080/highLevelData')
               .then(response => response.json())
               .then(json => this.setState({
                   highLevelData: json,

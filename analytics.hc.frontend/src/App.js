@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:8080/communities')
+    fetch('http://34.70.95.142:8080/communities')
           .then(response => response.json())
           .then(json => this.setState({
               communities: json,

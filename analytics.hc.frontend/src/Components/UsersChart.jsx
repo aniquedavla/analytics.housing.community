@@ -12,7 +12,7 @@ class UsersChart extends React.Component {
     }
   }
   componentDidMount(){
-    const usersUrl = "http://localhost:8080/numOfUsers";
+    const usersUrl = "http://34.70.95.142:8080/numOfUsers";
     fetch(usersUrl)
           .then(response => response.json())
           .then(json => this.setState({
