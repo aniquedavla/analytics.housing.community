@@ -20,6 +20,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Title from "./Title"
 import UsersChart from "./UsersChart"
+import AddNote from "./AddNote"
+import Notes from "./Notes"
 // import { mainListItems, secondaryListItems } from './listItems';
 // import Chart from './Chart';
 // import Deposits from './Deposits';
@@ -94,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
- const Dashboard = ({communities, highLevelData}) => {
+ const Dashboard = ({communities, highLevelData, notes}) => {
   console.log(communities)
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -114,6 +116,7 @@ const useStyles = makeStyles((theme) => ({
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Analytics - housing.community
           </Typography>
+          
         </Toolbar>
       </AppBar>
       <main className={classes.content}>
@@ -134,6 +137,12 @@ const useStyles = makeStyles((theme) => ({
               <Paper className={classes.paper}>
                 <CommunityTable communities={communities}></CommunityTable>
               </Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <Notes></Notes>
+              </Paper>
+              
             </Grid>
           </Grid>
         </Container>
