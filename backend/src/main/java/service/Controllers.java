@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-public class controllers {
+public class Controllers {
 
     @Autowired
     private RestTemplate restTemplate;
