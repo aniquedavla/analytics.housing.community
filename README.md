@@ -5,13 +5,16 @@ Frontend is built in Reactjs and Material UI. Backend in Java Spring Boot and Fi
 
 ## How to run the frontend
 
-> cd <into fronted dir>
-> npm install 
-> npm start
+> cd <into fronted dir> <br>
+  
+> npm install <br>
+
+> npm start 
   
 ## How to run the backend
 
-> Open backend dir in IntelliJ or Eclipse
+> Open backend dir in IntelliJ or Eclipse <br>
+
 > run Testing.java
 
 
