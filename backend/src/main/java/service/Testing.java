@@ -32,7 +32,7 @@ public class Testing {
 			throws FirebaseAuthException, InterruptedException, ExecutionException, MalformedURLException, IOException {
 
 		
-		SpringApplication.run(testing.class, args);
+		SpringApplication.run(Testing.class, args);
 	
         
         
