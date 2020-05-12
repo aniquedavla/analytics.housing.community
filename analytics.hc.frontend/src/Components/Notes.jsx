@@ -27,7 +27,7 @@ class Notes extends React.Component {
     if(this.state.isLoaded){
       return (
         <React.Fragment>
-            <Title>Notes by analyst</Title>
+            <Title>Notes</Title>
             <Box paddingLeft={120}><AddNote></AddNote></Box>
             <NotesTable notes={this.state.notes}></NotesTable>
         </React.Fragment>

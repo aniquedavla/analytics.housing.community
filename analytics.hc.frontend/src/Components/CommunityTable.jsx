@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -27,12 +28,12 @@ const CommunityTable = ({communities}) => {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Community Name</TableCell>
-            <TableCell>Date created</TableCell>
-            <TableCell>Number of listings</TableCell>
-            <TableCell>Average rent</TableCell>
-            <TableCell>Lowest rent</TableCell>
-            <TableCell>Highest rent</TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Community Name</Box></TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Date created</Box></TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Number of listings</Box></TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Average rent</Box></TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Lowest rent</Box></TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Highest rent</Box></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

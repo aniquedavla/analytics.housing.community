@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -26,9 +27,9 @@ const CommunityTable = ({notes}) => {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Note by</TableCell>
-            <TableCell>Subject</TableCell>
-            <TableCell>Note</TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Note by</Box></TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Subject</Box></TableCell>
+            <TableCell><Box fontWeight="fontWeightBold">Note</Box></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
