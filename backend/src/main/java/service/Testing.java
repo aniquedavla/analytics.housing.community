@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @RestController
-public class testing {
+public class Testing {
 
 	@Bean
 	public RestTemplate getRestTemplate() {
